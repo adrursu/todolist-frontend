@@ -1,4 +1,4 @@
-const API_URL = 'todolistbckendcontainer-e4a6bsb8gyf2a9a7.canadacentral-01.azurewebsites.net:3000/api';
+const API_URL = 'http://todolistbckendcontainer-e4a6bsb8gyf2a9a7.canadacentral-01.azurewebsites.net/api/todos';
 
 window.onload = fetchTodos;
 
