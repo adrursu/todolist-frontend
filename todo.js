@@ -1,12 +1,11 @@
 const API_URL = 'https://todolistbckendcontainer-e4a6bsb8gyf2a9a7.canadacentral-01.azurewebsites.net/api/todos/';
-const cors = require('cors');
-app.use(cors());
 
 window.onload = fetchTodos;
 
 function fetchTodos() {
-    fetch(API_URL)
-        .then(response => response.json())
+    fetch(API_URL,{
+         headers: { 'Content-Type': 'application/json' }
+        }).then(response => response.json())
         .then(todos => {
             const todoList = document.getElementById('todoList');
             todoList.innerHTML = '';
