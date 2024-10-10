@@ -1,10 +1,12 @@
 const API_URL = 'https://todolistbckendcontainer-e4a6bsb8gyf2a9a7.canadacentral-01.azurewebsites.net/api/todos/';
+const cors = require('cors');
+app.use(cors());
 
 window.onload = fetchTodos;
 
 function fetchTodos() {
     fetch(API_URL,
-          {headers: { ''Access-Control-Allow-Origin'': '*' }})
+          {headers: { 'Access-Control-Allow-Origin': '*' }})
         .then(response => response.json())
         .then(todos => {
             const todoList = document.getElementById('todoList');
