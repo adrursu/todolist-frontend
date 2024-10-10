@@ -5,8 +5,7 @@ app.use(cors());
 window.onload = fetchTodos;
 
 function fetchTodos() {
-    fetch(API_URL,
-          {headers: { 'Access-Control-Allow-Origin': '*' }})
+    fetch(API_URL)
         .then(response => response.json())
         .then(todos => {
             const todoList = document.getElementById('todoList');
